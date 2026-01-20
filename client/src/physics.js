@@ -28,10 +28,10 @@ export function createRenderer(engine, containerId = "game-container") {
 
 // helper to create walls
 export function createWalls(world) {
-  const floor = Bodies.rectangle(200, 600, 400, 20, { isStatic: true });
-  const leftWall = Bodies.rectangle(0, 300, 20, 600, { isStatic: true });
-  const rightWall = Bodies.rectangle(400, 300, 20, 600, { isStatic: true });
-  const ceiling = Bodies.rectangle(200, 0, 400, 20, { isStatic: true });
+  const floor = Bodies.rectangle(200, 610, 400, 20, { isStatic: true });
+  const leftWall = Bodies.rectangle(-10, 300, 20, 600, { isStatic: true });
+  const rightWall = Bodies.rectangle(410, 300, 20, 600, { isStatic: true });
+  const ceiling = Bodies.rectangle(200, -10, 400, 20, { isStatic: true });
 
   Composite.add(world, [floor, leftWall, rightWall, ceiling]);
 }

@@ -1,5 +1,5 @@
 import Matter from "matter-js";
-import { createCircle } from "./circles";
+import { createCircle } from "../circles";
 const { Bodies, Composite } = Matter;
 
 export function collisionEvent(engine, handlers) {

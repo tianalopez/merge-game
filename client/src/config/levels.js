@@ -12,7 +12,7 @@ export const LEVELS = {
   10: { radius: 50 }
 };
 
-export function getRandomLevel() => {
-  const randomNumber = Math.random() * (4-0) + 0
-  const randomLevel = LEVELS[randomNumber]
+export function getRandomLevel() {
+  const randomLevel = Math.round(Math.random() * (4-0) + 0)
+  return randomLevel
 }
