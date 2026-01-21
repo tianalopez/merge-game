@@ -18,9 +18,13 @@ export function createCircle(x, y, level) {
 }
 
 export function spawnRandomCircle(world, xCoordinate=200) {
-  console.log(xCoordinate)
+
   const randomCircle = createCircle(xCoordinate, 30, getRandomLevel())
   randomCircle.isStatic = true;
+  console.log("SPAWN", {
+    x: xCoordinate,
+    id: randomCircle.id
+  });
   Composite.add(world, randomCircle)
   return randomCircle
 }

@@ -8,8 +8,10 @@ export function logHandler(pair) {
 }
 
 export function mergeHandler(pair, pendingMerges) {
+
   const { bodyA, bodyB } = pair
   if (bodyA.level === bodyB.level && !bodyA.isMerging && !bodyB.isMerging) {
+    console.log("REMOVING", bodyA.id, bodyB.id);
     bodyA.isMerging = true;
     bodyB.isMerging = true;
 
