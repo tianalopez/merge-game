@@ -35,3 +35,17 @@ export function mergeEvent(engine, world, pendingMerges) {
 
   })
 }
+
+export function lineEvent(render) {
+  Matter.Events.on(render, 'afterRender', () => {
+    const ctx = render.context;
+    ctx.beginPath();
+    ctx.moveTo(0, 90);       // x start, y start
+    ctx.lineTo(400, 90);     // x end, y end
+    ctx.strokeStyle = "red";
+    ctx.setLineDash([5, 5]); // dashed line
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.setLineDash([]);     // reset
+  })
+}

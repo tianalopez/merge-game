@@ -1,7 +1,7 @@
 import Matter from "matter-js";
 import { createEngine, createRenderer, createWalls } from "./physics.js";
 import { createCircle, spawnRandomCircle } from "./circles.js";
-import { collisionEvent, mergeEvent } from "./events/matterEvents.js";
+import { collisionEvent, mergeEvent, lineEvent } from "./events/matterEvents.js";
 import { enableCircleMovement, setCurrentCircle } from "./events/movement.js";
 import { logHandler, mergeHandler } from "./handlers.js";
 
@@ -21,6 +21,9 @@ Runner.run(runner, engine);
 
 // create walls
 createWalls(world);
+
+//add loading line
+lineEvent(render)
 
 const pendingMerges = []
 

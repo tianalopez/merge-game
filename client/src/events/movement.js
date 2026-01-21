@@ -25,7 +25,7 @@ export function enableCircleMovement(containerId = "game-container") {
     lastMouseX = Math.max(leftEdge + radius, lastMouseX);
     lastMouseX = Math.min(rightEdge - radius, lastMouseX);
 
-    Matter.Body.setPosition(currentCircle, { x: lastMouseX, y: 30 });
+    Matter.Body.setPosition(currentCircle, { x: lastMouseX, y: 0 });
   });
 
   // click to drop

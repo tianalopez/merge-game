@@ -19,7 +19,7 @@ export function createCircle(x, y, level) {
 
 export function spawnRandomCircle(world, xCoordinate=200) {
 
-  const randomCircle = createCircle(xCoordinate, 30, getRandomLevel())
+  const randomCircle = createCircle(xCoordinate, 0, getRandomLevel())
   randomCircle.isStatic = true;
   console.log("SPAWN", {
     x: xCoordinate,
